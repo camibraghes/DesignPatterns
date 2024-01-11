@@ -1,4 +1,4 @@
-Welcome to the Design Patterns repository! 🚀
+## Welcome to the Design Patterns repository! 🚀
 
 This repository is dedicated to learning and mastering design patterns in Swift.
 To facilitate my learning journey, I've initially included valuable resources and started projects for each design pattern.
