@@ -12,7 +12,7 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RabbleWabble_final" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="QuestionView" customModule="RabbleWabble_final" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -40,7 +40,7 @@
                                 <buttonConfiguration key="configuration" style="plain" image="ic_circle_x"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aNQ-FS-Vcu">
-                                <rect key="frame" x="273" y="687" width="104" height="94"/>
+                                <rect key="frame" x="257" y="687" width="104" height="94"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="ic_circle_check"/>
                             </button>
@@ -51,7 +51,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iOl-P8-klq">
-                                <rect key="frame" x="315" y="790" width="20" height="37.333333333333371"/>
+                                <rect key="frame" x="299" y="790.66666666666663" width="20" height="37.333333333333371"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <color key="textColor" systemColor="systemGreenColor"/>
                                 <nil key="highlightedColor"/>
@@ -62,26 +62,31 @@
                         <constraints>
                             <constraint firstItem="rCw-I4-EWi" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="5En-T3-if6"/>
                             <constraint firstItem="u1K-zu-Y6n" firstAttribute="top" secondItem="rCw-I4-EWi" secondAttribute="bottom" constant="8" id="6SD-t4-c9j"/>
-                            <constraint firstItem="aNQ-FS-Vcu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8hb-5R-x0p"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rCw-I4-EWi" secondAttribute="trailing" id="8pp-IT-2Ic"/>
                             <constraint firstItem="rCw-I4-EWi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="9Ms-2A-Tzf"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CAb-xj-TGz" secondAttribute="trailing" id="Clh-aZ-iML"/>
                             <constraint firstItem="iOl-P8-klq" firstAttribute="centerX" secondItem="aNQ-FS-Vcu" secondAttribute="centerX" id="Ee3-IY-kJ2"/>
                             <constraint firstAttribute="bottom" secondItem="iOl-P8-klq" secondAttribute="bottom" constant="24" id="EyC-u5-x6x"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aNQ-FS-Vcu" secondAttribute="trailing" constant="32" id="HSN-we-yXZ"/>
                             <constraint firstItem="frW-4r-aLp" firstAttribute="top" secondItem="MQR-Bc-SkT" secondAttribute="bottom" constant="8" id="J9n-1S-c82"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="u1K-zu-Y6n" secondAttribute="trailing" id="KFg-Nh-9Co"/>
                             <constraint firstItem="iOl-P8-klq" firstAttribute="top" secondItem="aNQ-FS-Vcu" secondAttribute="bottom" constant="9.6666666666666288" id="Q3h-6e-hsI"/>
                             <constraint firstItem="aNQ-FS-Vcu" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="MQR-Bc-SkT" secondAttribute="trailing" constant="8" symbolic="YES" id="TNd-dC-7vC"/>
                             <constraint firstItem="MQR-Bc-SkT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-118.5" id="a6z-Zo-aDL"/>
-                            <constraint firstItem="aNQ-FS-Vcu" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-16" id="b2P-l6-Ccn"/>
                             <constraint firstItem="u1K-zu-Y6n" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="d6J-pb-XoQ"/>
                             <constraint firstItem="CAb-xj-TGz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hZv-MO-qKa"/>
                             <constraint firstItem="CAb-xj-TGz" firstAttribute="top" secondItem="u1K-zu-Y6n" secondAttribute="bottom" constant="50" id="j3E-bQ-ztg"/>
-                            <constraint firstItem="iOl-P8-klq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jgW-Cj-bBP"/>
                             <constraint firstAttribute="bottom" secondItem="frW-4r-aLp" secondAttribute="bottom" constant="24" id="vWO-TS-MlT"/>
                             <constraint firstItem="MQR-Bc-SkT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="vh5-VO-G5F"/>
                             <constraint firstItem="frW-4r-aLp" firstAttribute="centerX" secondItem="MQR-Bc-SkT" secondAttribute="centerX" id="zso-fH-O8d"/>
                         </constraints>
+                        <connections>
+                            <outlet property="answerLabel" destination="CAb-xj-TGz" id="eMB-At-JaB"/>
+                            <outlet property="correctCountLabel" destination="iOl-P8-klq" id="18F-6k-Ssf"/>
+                            <outlet property="hintLabel" destination="u1K-zu-Y6n" id="yWu-dw-sVw"/>
+                            <outlet property="incorrectCountLabel" destination="frW-4r-aLp" id="4LZ-y2-dVM"/>
+                            <outlet property="promptLabel" destination="rCw-I4-EWi" id="nl6-FN-gHA"/>
+                        </connections>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
