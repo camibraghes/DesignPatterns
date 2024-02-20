@@ -16,6 +16,7 @@
 		76E509272B849BCA00ACC152 /* QuestionGroupData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E509262B849BCA00ACC152 /* QuestionGroupData.swift */; };
 		76E509292B849C3300ACC152 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76E509282B849C3300ACC152 /* Assets.xcassets */; };
 		76E5092B2B849CBD00ACC152 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76E5092A2B849CBD00ACC152 /* LaunchScreen.storyboard */; };
+		76E5092D2B849D2E00ACC152 /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E5092C2B849D2E00ACC152 /* QuestionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		76E509262B849BCA00ACC152 /* QuestionGroupData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionGroupData.swift; sourceTree = "<group>"; };
 		76E509282B849C3300ACC152 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		76E5092A2B849CBD00ACC152 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		76E5092C2B849D2E00ACC152 /* QuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 			children = (
 				76E508B62B84976600ACC152 /* Main.storyboard */,
 				76E5092A2B849CBD00ACC152 /* LaunchScreen.storyboard */,
+				76E5092C2B849D2E00ACC152 /* QuestionView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -190,6 +193,7 @@
 				76E508B52B84976600ACC152 /* ViewController.swift in Sources */,
 				76E509232B849B4800ACC152 /* Question.swift in Sources */,
 				76E508B12B84976600ACC152 /* AppDelegate.swift in Sources */,
+				76E5092D2B849D2E00ACC152 /* QuestionView.swift in Sources */,
 				76E509272B849BCA00ACC152 /* QuestionGroupData.swift in Sources */,
 				76E509252B849B6500ACC152 /* QuestionGroup.swift in Sources */,
 				76E508B32B84976600ACC152 /* SceneDelegate.swift in Sources */,
