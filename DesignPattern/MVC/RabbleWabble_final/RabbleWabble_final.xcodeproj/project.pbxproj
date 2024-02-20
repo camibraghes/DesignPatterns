@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		76E508B12B84976600ACC152 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E508B02B84976600ACC152 /* AppDelegate.swift */; };
 		76E508B32B84976600ACC152 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E508B22B84976600ACC152 /* SceneDelegate.swift */; };
-		76E508B52B84976600ACC152 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E508B42B84976600ACC152 /* ViewController.swift */; };
+		76E508B52B84976600ACC152 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E508B42B84976600ACC152 /* QuestionViewController.swift */; };
 		76E508B82B84976600ACC152 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76E508B62B84976600ACC152 /* Main.storyboard */; };
 		76E509232B849B4800ACC152 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E509222B849B4800ACC152 /* Question.swift */; };
 		76E509252B849B6500ACC152 /* QuestionGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E509242B849B6500ACC152 /* QuestionGroup.swift */; };
@@ -23,7 +23,7 @@
 		76E508AD2B84976600ACC152 /* RabbleWabble_final.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RabbleWabble_final.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76E508B02B84976600ACC152 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		76E508B22B84976600ACC152 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		76E508B42B84976600ACC152 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		76E508B42B84976600ACC152 /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 		76E508B72B84976600ACC152 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		76E508BE2B84976700ACC152 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		76E509222B849B4800ACC152 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
@@ -85,7 +85,7 @@
 		76E5091E2B8499C600ACC152 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				76E508B42B84976600ACC152 /* ViewController.swift */,
+				76E508B42B84976600ACC152 /* QuestionViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -190,7 +190,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				76E508B52B84976600ACC152 /* ViewController.swift in Sources */,
+				76E508B52B84976600ACC152 /* QuestionViewController.swift in Sources */,
 				76E509232B849B4800ACC152 /* Question.swift in Sources */,
 				76E508B12B84976600ACC152 /* AppDelegate.swift in Sources */,
 				76E5092D2B849D2E00ACC152 /* QuestionView.swift in Sources */,
