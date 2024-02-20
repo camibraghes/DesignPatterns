@@ -1,15 +1,8 @@
-//
-//  ViewController.swift
-//  RabbleWabble_final
-//
-//  Created by Camelia Braghes on 20.02.2024.
-//
-
 import UIKit
 
-class ViewController: UIViewController {
+public class QuestionViewController: UIViewController {
 
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }

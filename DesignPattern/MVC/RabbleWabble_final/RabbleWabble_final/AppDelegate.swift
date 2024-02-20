@@ -1,10 +1,3 @@
-//
-//  AppDelegate.swift
-//  RabbleWabble_final
-//
-//  Created by Camelia Braghes on 20.02.2024.
-//
-
 import UIKit
 
 @main
