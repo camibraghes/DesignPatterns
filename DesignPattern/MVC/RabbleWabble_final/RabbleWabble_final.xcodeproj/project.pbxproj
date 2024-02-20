@@ -56,15 +56,55 @@
 		76E508AF2B84976600ACC152 /* RabbleWabble_final */ = {
 			isa = PBXGroup;
 			children = (
-				76E508B02B84976600ACC152 /* AppDelegate.swift */,
-				76E508B22B84976600ACC152 /* SceneDelegate.swift */,
-				76E508B42B84976600ACC152 /* ViewController.swift */,
-				76E508B62B84976600ACC152 /* Main.storyboard */,
-				76E508B92B84976700ACC152 /* Assets.xcassets */,
-				76E508BB2B84976700ACC152 /* LaunchScreen.storyboard */,
-				76E508BE2B84976700ACC152 /* Info.plist */,
+				76E509202B8499F000ACC152 /* Models */,
+				76E5091F2B8499D700ACC152 /* Views */,
+				76E5091E2B8499C600ACC152 /* Controllers */,
+				76E5091D2B8499B700ACC152 /* AppDelegate */,
+				76E509212B8499FD00ACC152 /* Resources */,
 			);
 			path = RabbleWabble_final;
+			sourceTree = "<group>";
+		};
+		76E5091D2B8499B700ACC152 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				76E508B02B84976600ACC152 /* AppDelegate.swift */,
+				76E508B22B84976600ACC152 /* SceneDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		76E5091E2B8499C600ACC152 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				76E508B42B84976600ACC152 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		76E5091F2B8499D700ACC152 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				76E508B62B84976600ACC152 /* Main.storyboard */,
+				76E508BB2B84976700ACC152 /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		76E509202B8499F000ACC152 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		76E509212B8499FD00ACC152 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				76E508B92B84976700ACC152 /* Assets.xcassets */,
+				76E508BE2B84976700ACC152 /* Info.plist */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -294,7 +334,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = L6LMBZLKC4;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = RabbleWabble_final/Info.plist;
+				INFOPLIST_FILE = RabbleWabble_final/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -305,7 +345,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "agilefreaks.RabbleWabble-final";
+				PRODUCT_BUNDLE_IDENTIFIER = "RabbleWabble-final";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -322,7 +362,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = L6LMBZLKC4;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = RabbleWabble_final/Info.plist;
+				INFOPLIST_FILE = RabbleWabble_final/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -333,7 +373,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "agilefreaks.RabbleWabble-final";
+				PRODUCT_BUNDLE_IDENTIFIER = "RabbleWabble-final";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
