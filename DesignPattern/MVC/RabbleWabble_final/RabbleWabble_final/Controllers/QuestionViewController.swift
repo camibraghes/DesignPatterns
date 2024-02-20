@@ -39,12 +39,16 @@ public class QuestionViewController: UIViewController {
     }
     
     @IBAction func handleCorrect(_ sender: Any) {
+        guard questionIndex < questionGroup.questions.count else { return }
+        
         correctCount += 1
         questionView.correctCountLabel.text = "\(correctCount)"
         showNextQuestion()
     }
     
     @IBAction func handleIncorrect(_ sender: Any) {
+        guard questionIndex < questionGroup.questions.count else { return }
+        
         incorrectCount += 1
         questionView.incorrectCountLabel.text = "\(incorrectCount)"
         showNextQuestion()
