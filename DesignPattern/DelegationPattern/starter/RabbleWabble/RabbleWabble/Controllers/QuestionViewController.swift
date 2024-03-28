@@ -82,8 +82,10 @@ public class QuestionViewController: UIViewController {
   private func showNextQuestion() {
     questionIndex += 1
     guard questionIndex < questionGroup.questions.count else {
-      // TODO: - Handle this...!
-      return
+        questionView.promptLabel.text = "Quiz is completed"
+        questionView.answerLabel.text = ""
+        questionView.hintLabel.text = ""
+        return
     }
     showQuestion()
   }
