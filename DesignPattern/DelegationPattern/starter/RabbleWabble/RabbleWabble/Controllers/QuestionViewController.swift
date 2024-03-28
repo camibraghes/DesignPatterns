@@ -28,9 +28,16 @@
 
 import UIKit
 
+protocol QuestionViewControllerDelegate: AnyObject {
+  func questionViewController(_ viewController: QuestionViewController, didCancel questionGroup: QuestionGroup, at questionIndex: Int)
+  func questionViewController(_ viewController: QuestionViewController, didComplete questionGroup: QuestionGroup)
+}
+
 public class QuestionViewController: UIViewController {
 
   // MARK: - Instance Properties
+  weak var delegate: QuestionViewControllerDelegate?
+  
   public var questionGroup: QuestionGroup! {
     didSet {
       navigationItem.title = questionGroup.title
@@ -57,9 +64,26 @@ public class QuestionViewController: UIViewController {
   }()
   
   // MARK: - View Lifecycle
+  
   public override func viewDidLoad() {
     super.viewDidLoad()
+    setupCancelButton()
     showQuestion()
+  }
+  
+  private func setupCancelButton() {
+    let action = #selector(handleCancelPressed(sender:))
+    let image = UIImage(named: "ic_menu")
+    navigationItem.leftBarButtonItem =
+    UIBarButtonItem(image: image,
+                    landscapeImagePhone: nil,
+                    style: .plain,
+                    target: self,
+                    action: action)
+  }
+  
+  @objc private func handleCancelPressed(sender: UIBarButtonItem) {
+    delegate?.questionViewController(self, didCancel: questionGroup, at: questionIndex)
   }
   
   private func showQuestion() {
@@ -98,10 +122,13 @@ public class QuestionViewController: UIViewController {
   private func showNextQuestion() {
     questionIndex += 1
     guard questionIndex < questionGroup.questions.count else {
-        questionView.promptLabel.text = "Quiz is completed"
-        questionView.answerLabel.text = ""
-        questionView.hintLabel.text = ""
-        return
+      questionView.promptLabel.text = "Quiz is completed"
+      questionView.answerLabel.text = ""
+      questionView.hintLabel.text = ""
+      
+      delegate?.questionViewController(self, didComplete: questionGroup)
+      
+      return
     }
     showQuestion()
   }
