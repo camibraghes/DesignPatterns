@@ -1,6 +1,6 @@
 import Foundation
 
-public protocol QuestionStrategy: AnyObject {
+public protocol QuestionStrategyPattern: AnyObject {
     var title: String { get }
     
     var correctCount: Int { get }
