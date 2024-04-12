@@ -18,6 +18,7 @@
 		763E4FC72B8F40ED009F76E8 /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763E4FB62B8F40ED009F76E8 /* QuestionView.swift */; };
 		763E4FC82B8F40ED009F76E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 763E4FB72B8F40ED009F76E8 /* LaunchScreen.storyboard */; };
 		763E4FC92B8F40ED009F76E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 763E4FB82B8F40ED009F76E8 /* Main.storyboard */; };
+		7642A8D92BC9791200D44B11 /* RandomQuestionStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7642A8D82BC9791200D44B11 /* RandomQuestionStrategy.swift */; };
 		7655F3B22B4D581A0099683D /* DesignPatternApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7655F3B12B4D581A0099683D /* DesignPatternApp.swift */; };
 		7655F3B42B4D581A0099683D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7655F3B32B4D581A0099683D /* ContentView.swift */; };
 		7655F3B62B4D581B0099683D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7655F3B52B4D581B0099683D /* Assets.xcassets */; };
@@ -856,6 +857,7 @@
 		763E4FB72B8F40ED009F76E8 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		763E4FB82B8F40ED009F76E8 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		763E4FB92B8F40ED009F76E8 /* RabbleWabble_final.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = RabbleWabble_final.xcodeproj; sourceTree = "<group>"; };
+		7642A8D82BC9791200D44B11 /* RandomQuestionStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomQuestionStrategy.swift; sourceTree = "<group>"; };
 		7655F3AE2B4D581A0099683D /* DesignPattern.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesignPattern.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7655F3B12B4D581A0099683D /* DesignPatternApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignPatternApp.swift; sourceTree = "<group>"; };
 		7655F3B32B4D581A0099683D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -5072,6 +5074,7 @@
 			children = (
 				765FDB332BC8253A00E3E1C8 /* QuestionStrategyPattern.swift */,
 				765FDB352BC8266600E3E1C8 /* SequentialQuestionStrategy.swift */,
+				7642A8D82BC9791200D44B11 /* RandomQuestionStrategy.swift */,
 			);
 			path = Strategies;
 			sourceTree = "<group>";
@@ -6029,6 +6032,7 @@
 				7655F4562B4FE16C0099683D /* Question.swift in Sources */,
 				7655F8542B4FE2930099683D /* ClearState.swift in Sources */,
 				7655F7C72B4FE24E0099683D /* Pods-CoffeeQuest-dummy.m in Sources */,
+				7642A8D92BC9791200D44B11 /* RandomQuestionStrategy.swift in Sources */,
 				7655F9D32B4FE3340099683D /* RefereeTests.swift in Sources */,
 				7655F4F82B4FE1C20099683D /* QuestionStrategy.swift in Sources */,
 				7655F7442B4FE2360099683D /* YLPClient.m in Sources */,
