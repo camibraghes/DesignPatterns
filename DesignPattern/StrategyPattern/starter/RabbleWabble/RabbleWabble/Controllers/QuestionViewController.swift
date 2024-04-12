@@ -124,14 +124,18 @@ public class QuestionViewController: UIViewController {
     }
     
     @IBAction func handleCorrect(_ sender: Any) {
-        correctCount += 1
-        questionView.correctCountLabel.text = "\(correctCount)"
+        let question = questionStrategy.currentQuestion()
+        
+        questionStrategy.markQuestionCorrect(question)
+        questionView.correctCountLabel.text = "\(questionStrategy.correctCount)"
         showNextQuestion()
     }
     
     @IBAction func handleIncorrect(_ sender: Any) {
-        incorrectCount += 1
-        questionView.incorrectCountLabel.text = "\(incorrectCount)"
+        let question = questionStrategy.currentQuestion()
+        
+        questionStrategy.markQuestionIncorrect(question)
+        questionView.incorrectCountLabel.text = "\(questionStrategy.incorrectCount)"
         showNextQuestion()
     }
     
