@@ -4,7 +4,7 @@ public protocol QuestionStrategyPattern: AnyObject {
     var title: String { get }
     
     var correctCount: Int { get }
-    var incorrectCiunt: Int { get }
+    var incorrectCount: Int { get }
     
     func advanceToNextQuestion() -> Bool
     

@@ -1,7 +1,6 @@
 import Foundation
 
-public class SequentialQuestionStrategy: QuestionStrategyPattern {
-    
+public class SequentialQuestionStrategy: QuestionStrategyPattern {    
     public var correctCount: Int = 0
     public var incorrectCount: Int = 0
     private let questionGroup: QuestionGroup

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -19,6 +19,9 @@
 		425C94BC22EF3371007B51EE /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425C94BB22EF3371007B51EE /* QuestionView.swift */; };
 		42FBF7D522EF67CF00186FF0 /* SelectQuestionGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42FBF7D422EF67CF00186FF0 /* SelectQuestionGroupViewController.swift */; };
 		42FBF7D722EF67F900186FF0 /* QuestionGroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42FBF7D622EF67F900186FF0 /* QuestionGroupCell.swift */; };
+		76739AEA2BD051D5008E83A8 /* SequentialQuestionStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76739AE72BD051D5008E83A8 /* SequentialQuestionStrategy.swift */; };
+		76739AEB2BD051D5008E83A8 /* RandomQuestionStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76739AE82BD051D5008E83A8 /* RandomQuestionStrategy.swift */; };
+		76739AEC2BD051D5008E83A8 /* QuestionStrategyPattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76739AE92BD051D5008E83A8 /* QuestionStrategyPattern.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +39,9 @@
 		425C94BB22EF3371007B51EE /* QuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
 		42FBF7D422EF67CF00186FF0 /* SelectQuestionGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectQuestionGroupViewController.swift; sourceTree = "<group>"; };
 		42FBF7D622EF67F900186FF0 /* QuestionGroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionGroupCell.swift; sourceTree = "<group>"; };
+		76739AE72BD051D5008E83A8 /* SequentialQuestionStrategy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SequentialQuestionStrategy.swift; sourceTree = "<group>"; };
+		76739AE82BD051D5008E83A8 /* RandomQuestionStrategy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomQuestionStrategy.swift; sourceTree = "<group>"; };
+		76739AE92BD051D5008E83A8 /* QuestionStrategyPattern.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionStrategyPattern.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +124,7 @@
 		424452A122EC2AFB001C3BC3 /* RabbleWabble */ = {
 			isa = PBXGroup;
 			children = (
+				76739AE62BD051D5008E83A8 /* Strategies */,
 				420C7C5122EC8F1600472B72 /* AppDelegate */,
 				420C7C5222EC8F3700472B72 /* Controllers */,
 				420C7C5322EC8F5900472B72 /* Models */,
@@ -125,6 +132,16 @@
 				420C7C5522EC8F6200472B72 /* Views */,
 			);
 			path = RabbleWabble;
+			sourceTree = "<group>";
+		};
+		76739AE62BD051D5008E83A8 /* Strategies */ = {
+			isa = PBXGroup;
+			children = (
+				76739AE72BD051D5008E83A8 /* SequentialQuestionStrategy.swift */,
+				76739AE82BD051D5008E83A8 /* RandomQuestionStrategy.swift */,
+				76739AE92BD051D5008E83A8 /* QuestionStrategyPattern.swift */,
+			);
+			path = Strategies;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -153,8 +170,9 @@
 		4244529722EC2AFB001C3BC3 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 1100;
-				LastUpgradeCheck = 1100;
+				LastUpgradeCheck = 1520;
 				ORGANIZATIONNAME = "Razeware, LLC";
 				TargetAttributes = {
 					4244529E22EC2AFB001C3BC3 = {
@@ -198,13 +216,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76739AEA2BD051D5008E83A8 /* SequentialQuestionStrategy.swift in Sources */,
 				424452A722EC2AFB001C3BC3 /* QuestionViewController.swift in Sources */,
 				425C94B222EF21C1007B51EE /* Question.swift in Sources */,
+				76739AEB2BD051D5008E83A8 /* RandomQuestionStrategy.swift in Sources */,
 				424452A322EC2AFB001C3BC3 /* AppDelegate.swift in Sources */,
 				425C94BC22EF3371007B51EE /* QuestionView.swift in Sources */,
 				425C94B622EF22BC007B51EE /* QuestionGroupData.swift in Sources */,
 				42FBF7D722EF67F900186FF0 /* QuestionGroupCell.swift in Sources */,
 				425C94B422EF21D3007B51EE /* QuestionGroup.swift in Sources */,
+				76739AEC2BD051D5008E83A8 /* QuestionStrategyPattern.swift in Sources */,
 				42FBF7D522EF67CF00186FF0 /* SelectQuestionGroupViewController.swift in Sources */,
 				424452A522EC2AFB001C3BC3 /* SceneDelegate.swift in Sources */,
 			);
@@ -250,6 +271,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -260,6 +282,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -310,6 +333,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -320,6 +344,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -343,6 +368,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = RabbleWabble/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -360,6 +386,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = RabbleWabble/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
