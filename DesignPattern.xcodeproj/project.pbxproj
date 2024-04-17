@@ -44,7 +44,6 @@
 		7655F4542B4FE16C0099683D /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7655F43E2B4FE16C0099683D /* Info.plist */; };
 		7655F4552B4FE16C0099683D /* QuestionGroupData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7655F4402B4FE16C0099683D /* QuestionGroupData.swift */; };
 		7655F4562B4FE16C0099683D /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7655F4412B4FE16C0099683D /* Question.swift */; };
-		7655F4572B4FE16C0099683D /* QuestionGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7655F4422B4FE16C0099683D /* QuestionGroup.swift */; };
 		7655F4582B4FE16C0099683D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7655F4442B4FE16C0099683D /* AppDelegate.swift */; };
 		7655F4592B4FE16C0099683D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7655F4452B4FE16C0099683D /* SceneDelegate.swift */; };
 		7655F45A2B4FE16C0099683D /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7655F4472B4FE16C0099683D /* QuestionViewController.swift */; };
@@ -573,6 +572,7 @@
 		7655FACE2B4FE3770099683D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7655FAB52B4FE3770099683D /* AppDelegate.swift */; };
 		765FDB342BC8253A00E3E1C8 /* QuestionStrategyPattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765FDB332BC8253A00E3E1C8 /* QuestionStrategyPattern.swift */; };
 		765FDB362BC8266600E3E1C8 /* SequentialQuestionStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765FDB352BC8266600E3E1C8 /* SequentialQuestionStrategy.swift */; };
+		76739AC82BD04933008E83A8 /* QuestionGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76739AC72BD04933008E83A8 /* QuestionGroup.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -886,7 +886,6 @@
 		7655F43E2B4FE16C0099683D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7655F4402B4FE16C0099683D /* QuestionGroupData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionGroupData.swift; sourceTree = "<group>"; };
 		7655F4412B4FE16C0099683D /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
-		7655F4422B4FE16C0099683D /* QuestionGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionGroup.swift; sourceTree = "<group>"; };
 		7655F4442B4FE16C0099683D /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7655F4452B4FE16C0099683D /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		7655F4472B4FE16C0099683D /* QuestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
@@ -1572,6 +1571,7 @@
 		7655FAB52B4FE3770099683D /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		765FDB332BC8253A00E3E1C8 /* QuestionStrategyPattern.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionStrategyPattern.swift; sourceTree = "<group>"; };
 		765FDB352BC8266600E3E1C8 /* SequentialQuestionStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequentialQuestionStrategy.swift; sourceTree = "<group>"; };
+		76739AC72BD04933008E83A8 /* QuestionGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionGroup.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -2035,9 +2035,9 @@
 		7655F43F2B4FE16C0099683D /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				76739AC72BD04933008E83A8 /* QuestionGroup.swift */,
 				7655F4402B4FE16C0099683D /* QuestionGroupData.swift */,
 				7655F4412B4FE16C0099683D /* Question.swift */,
-				7655F4422B4FE16C0099683D /* QuestionGroup.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -5907,6 +5907,7 @@
 				7655FA7F2B4FE34F0099683D /* PasswordViewController.swift in Sources */,
 				7655F7382B4FE2360099683D /* YLPSearch.m in Sources */,
 				7655F95F2B4FE2FB0099683D /* YLPClient+Reviews.m in Sources */,
+				76739AC82BD04933008E83A8 /* QuestionGroup.swift in Sources */,
 				7655F42C2B4FE1430099683D /* QuestionGroupData.swift in Sources */,
 				7655F58D2B4FE1E20099683D /* AppSettings.swift in Sources */,
 				7655F4882B4FE18C0099683D /* Question.swift in Sources */,
@@ -6053,7 +6054,6 @@
 				7655F8512B4FE2930099683D /* DrawView.swift in Sources */,
 				7655F58E2B4FE1E20099683D /* Question.swift in Sources */,
 				7655FA592B4FE34F0099683D /* KeychainWrapper.swift in Sources */,
-				7655F4572B4FE16C0099683D /* QuestionGroup.swift in Sources */,
 				7655F5902B4FE1E20099683D /* AppDelegate.swift in Sources */,
 				7655F4B92B4FE1A90099683D /* RandomQuestionStrategy.swift in Sources */,
 				7655F5752B4FE1E20099683D /* AppDelegate.swift in Sources */,

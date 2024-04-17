@@ -29,17 +29,9 @@
 import UIKit
 
 public protocol QuestionViewControllerDelegate: AnyObject {
+    func questionViewController(_ viewController: QuestionViewController, didCancel questionGroup: QuestionStrategyPattern)
     
-    // 1
-    func questionViewController(
-        _ viewController: QuestionViewController,
-        didCancel questionGroup: QuestionGroup,
-        at questionIndex: Int)
-    
-    // 2
-    func questionViewController(
-        _ viewController: QuestionViewController,
-        didComplete questionGroup: QuestionGroup)
+    func questionViewController(_ viewController: QuestionViewController, didComplete questionGroup: QuestionStrategyPattern)
 }
 
 public class QuestionViewController: UIViewController {
@@ -47,17 +39,12 @@ public class QuestionViewController: UIViewController {
     // MARK: - Instance Properties
     public weak var delegate: QuestionViewControllerDelegate?
     
-    public var questionGroup: QuestionGroup! {
-        didSet {
-            navigationItem.title = questionGroup.title
-        }
-    }
-    
     public var questionStrategy: QuestionStrategyPattern! {
         didSet {
             navigationItem.title = questionStrategy.title
         }
     }
+    
     public var questionIndex = 0
     
     public var correctCount = 0
@@ -97,10 +84,7 @@ public class QuestionViewController: UIViewController {
     }
     
     @objc private func handleCancelPressed(sender: UIBarButtonItem) {
-        delegate?.questionViewController(
-            self,
-            didCancel: questionGroup,
-            at: questionIndex)
+        delegate?.questionViewController(self, didCancel: questionStrategy)
     }
     
     private func showQuestion() {
@@ -140,9 +124,8 @@ public class QuestionViewController: UIViewController {
     }
     
     private func showNextQuestion() {
-        questionIndex += 1
-        guard questionIndex < questionGroup.questions.count else {
-            delegate?.questionViewController(self, didComplete: questionGroup)
+        guard questionStrategy.advanceToNextQuestion() else {
+            delegate?.questionViewController(self, didComplete: questionStrategy)
             return
         }
         showQuestion()

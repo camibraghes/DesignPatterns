@@ -1,7 +1,6 @@
-import Foundation
 import GameplayKit.GKRandomSource
 
-public class RandomQuestionStrategy: QuestionStrategy {
+public class RandomQuestionStrategy: QuestionStrategyPattern {
     public var correctCount: Int = 0
     public var incorrectCount: Int = 0
     private let questionGroup: QuestionGroup
