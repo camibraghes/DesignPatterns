@@ -33,3 +33,27 @@ public class AppSettings {
   
   private init() {}
 }
+
+public enum QuestionStrategyType: Int, CaseIterable {
+  
+  case random
+  case sequential
+  
+  public func title() -> String {
+    switch self {
+    case .random:
+      return "random"
+    case .sequential:
+      return "sequential"
+    }
+  }
+  
+  public func questionStrategy(for questionGroup: QuestionGroup) -> QuestionStrategy {
+    switch self {
+    case .random:
+      return RandomQuestionStrategy(questionGroup: questionGroup)
+    case .sequential:
+      return SequentialQuestionStrategy(questionGroup: questionGroup)
+    }
+  }
+}
