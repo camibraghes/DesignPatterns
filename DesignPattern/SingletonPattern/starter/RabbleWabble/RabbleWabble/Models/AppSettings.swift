@@ -29,9 +29,29 @@
 import Foundation
 
 public class AppSettings {
+  
+  private struct Keys {
+    static let questionStrategy = "questionStrategy"
+  }
+  
   static let shared = AppDelegate()
   
+  public var questionStrategyType: QuestionStrategyType {
+    get {
+      let rawValue = userDefaults.integer(forKey: Keys.questionStrategy)
+      return QuestionStrategyType(rawValue: rawValue)!
+    } 
+    set {
+      userDefaults.set(newValue.rawValue, forKey: Keys.questionStrategy)
+    }
+  }
+  
+  private let userDefaults = UserDefaults.standard
   private init() {}
+  
+  public func questionStrategy(for questionGroup: QuestionGroup) -> QuestionStrategy {
+    return questionStrategyType.questionStrategy(for: questionGroup)
+  }
 }
 
 public enum QuestionStrategyType: Int, CaseIterable {
