@@ -27,53 +27,16 @@
 /// THE SOFTWARE.
 
 import Foundation
+import UIKit
 
-public class AppSettings {
+public class AppSettingsViewController: UITableViewController {
+  public let appSettings = AppSettings.shared
+  private let cellIdentifier = "basicCell"
   
-  private struct Keys {
-    static let questionStrategy = "questionStrategy"
-  }
-  
-  static let shared = AppSettings()
-  
-  public var questionStrategyType: QuestionStrategyType {
-    get {
-      let rawValue = userDefaults.integer(forKey: Keys.questionStrategy)
-      return QuestionStrategyType(rawValue: rawValue)!
-    } 
-    set {
-      userDefaults.set(newValue.rawValue, forKey: Keys.questionStrategy)
-    }
-  }
-  
-  private let userDefaults = UserDefaults.standard
-  private init() {}
-  
-  public func questionStrategy(for questionGroup: QuestionGroup) -> QuestionStrategy {
-    return questionStrategyType.questionStrategy(for: questionGroup)
-  }
-}
-
-public enum QuestionStrategyType: Int, CaseIterable {
-  
-  case random
-  case sequential
-  
-  public func title() -> String {
-    switch self {
-    case .random:
-      return "random"
-    case .sequential:
-      return "sequential"
-    }
-  }
-  
-  public func questionStrategy(for questionGroup: QuestionGroup) -> QuestionStrategy {
-    switch self {
-    case .random:
-      return RandomQuestionStrategy(questionGroup: questionGroup)
-    case .sequential:
-      return SequentialQuestionStrategy(questionGroup: questionGroup)
-    }
+  public override func viewDidLoad() {
+    super.viewDidLoad()
+    
+    tableView.tableFooterView = UIView()
+    tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellIdentifier)
   }
 }
