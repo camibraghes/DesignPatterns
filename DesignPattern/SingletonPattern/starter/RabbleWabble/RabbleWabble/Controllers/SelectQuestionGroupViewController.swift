@@ -38,6 +38,7 @@ public class SelectQuestionGroupViewController: UIViewController {
   }
   
   // MARK: - Properties
+  private let appSettings = AppSettings.shared
   public let questionGroups = QuestionGroup.allGroups()
   private var selectedQuestionGroup: QuestionGroup!
 }
@@ -77,7 +78,7 @@ extension SelectQuestionGroupViewController: UITableViewDelegate {
                                sender: Any?) {
     guard let viewController = segue.destination
       as? QuestionViewController else { return }
-    viewController.questionStrategy = SequentialQuestionStrategy(questionGroup: selectedQuestionGroup)
+    viewController.questionStrategy = appSettings.questionStrategy(for: selectedQuestionGroup)
     viewController.delegate = self
   }
 }
